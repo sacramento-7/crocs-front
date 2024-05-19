@@ -2,6 +2,8 @@ import Navbar from "@/components/navbar/Navbar";
 import Footer from '@/components/footer/Footer';
 import "@/styles/globals.css";
 import { AuthProvider } from "@/context/AuthContext";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 export const metadata = {
@@ -15,10 +17,11 @@ export default function RootLayout({ children }) {
       <body>
         <AuthProvider>
           <Navbar />
-          <main>  
+          <main className="min-h-[78dvh]">  
             {children}
           </main>
           <Footer />
+          <ToastContainer />
         </AuthProvider>
       </body>
 

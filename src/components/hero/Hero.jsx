@@ -12,7 +12,7 @@ const hero = () => {
                     <div className="flex-1 flex items-center p-4">
                         <div className="flex flex-col justify-center space-y-4">
                             <div className="space-y-2">
-                                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                                <h1 className="text-3xl font-bold tracking-tighter sm:text-3xl md:text-4xl xl:text-6xl/none">
                                     Make your style by CROCS Products
                                 </h1>
                                 <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">

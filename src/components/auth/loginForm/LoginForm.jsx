@@ -10,7 +10,8 @@ import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import Cookies from 'js-cookie';
 import { useEffect, useState } from 'react';
-import { revalidatePath } from 'next/cache';
+import { useAuth } from '@/context/AuthContext';
+import { toast } from 'react-toastify';
 
 
 const schema = yup.object({
@@ -27,27 +28,40 @@ const LoginForm = () => {
         resolver: yupResolver(schema),
     });
     const [errorMessage, setErrorMessage] = useState(null);
-    const [key, setKey] = useState(null);
+    //const [key, setKey] = useState(null);
+    const { setToken } = useAuth();
 
     const router = useRouter();
 
-    //let key = '';
+    let key = '';
 
     const submitHandler = async (data) => {
         try {
             const response = await axios.post('http://localhost:3000/api/login', data).then((res) => {
                 if (res.data.error) {
                     setErrorMessage('Phone Number or Password is wrong!');
+                    return;
                 }
 
-                //key = res.data.key;
-                setKey(res.data.key);
+                key = res.data.key;
+                setToken(key);
+                //setKey(res.data.key);
 
             });
 
             if (key !== undefined && key !== null) {
                 Cookies.set('Token', key, { path: '/', secure: true, sameSite: 'strict', expires: 4 }); // Set cookie to expire in 4 days
                 router.push('/');
+                toast.success("You have successfully logged in!", {
+                    position: "bottom-right",
+                    autoClose: 4000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                  });
+
                 //revalidatePath('/');
             }
 

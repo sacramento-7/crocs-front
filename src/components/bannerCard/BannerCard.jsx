@@ -10,16 +10,15 @@ const BannerCard = () => {
     return (
         <Card>
             <CardContent>
-                <Link className="absolute inset-0 z-10" href="#">
+                {/* <Link className="absolute inset-0 z-10" href="#">
                     <span className="sr-only">View</span>
-                </Link>
+                </Link> */}
                 <Image
                     alt="Image 1"
                     className="aspect-square object-cover w-full"
                     height={400}
                     src={logo}
                     width={400}
-
                 />
             </CardContent>
         </Card>

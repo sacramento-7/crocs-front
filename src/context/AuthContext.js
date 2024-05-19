@@ -12,19 +12,11 @@ export const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const storedUserToken = Cookies.get('Token');
-        //const storedUser = localStorage.getItem('user');
         if (storedUserToken) {
             setToken(storedUserToken);
         }
     }, []);
 
-    // const login = (userData) => {
-    //     setUser(userData);
-    // };
-
-    // const logout = () => {
-    //     setUser(null);
-    // };
 
     return (
         <AuthContext.Provider value={{ token, setToken }}>

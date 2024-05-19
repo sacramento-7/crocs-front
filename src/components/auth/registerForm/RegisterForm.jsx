@@ -9,6 +9,7 @@ import * as yup from 'yup';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const schema = yup.object({
     phone: yup.string().required('Please enter your Phone Number'),
@@ -41,6 +42,15 @@ const RegisterForm = () => {
                 console.log(res.data);
                 if (res.data.resp.message) {
                     router.push('/accounts/login');
+                    toast.success("You have successfully registered!", {
+                        position: "bottom-right",
+                        autoClose: 4000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                      });
                 }
             });
 
