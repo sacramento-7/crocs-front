@@ -22,7 +22,7 @@ const ServiceLabels = () => {
           <FaShieldAlt className="w-10 h-10 text-primary"/>
           <h3 className="text-lg font-semibold">Money-Back Guarantee</h3>
           <p className="text-gray-500 dark:text-gray-400 max-w-[240px]">
-            If you're not satisfied, we'll refund your money.
+            If you are not satisfied, we will refund your money.
           </p>
         </div>
         <div className="flex flex-col items-center text-center space-y-2">

@@ -2,14 +2,15 @@
 
 import LoginForm from "@/components/auth/loginForm/LoginForm";
 import { useAuth } from '@/context/AuthContext';
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 
 const page = () => {
     const { token } = useAuth();
     const router = useRouter();
     if(token){
-        router.push("/");
-        return;
+        //router.push("/");
+        redirect('/');
+        //return;
     }
 
     return (

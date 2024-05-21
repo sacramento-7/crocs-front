@@ -20,7 +20,7 @@ const ContactInformationCard = () => {
                     <FaPhoneAlt className="mt-1 h-6 w-6 text-gray-500 dark:text-gray-400" />
                     <div className="space-y-1">
                         <div className="font-medium">Phone</div>
-                        <p className="text-gray-500 dark:text-gray-400">+98 (936) 123-4455</p>
+                        <p className="text-gray-500 dark:text-gray-400">+98 936 123-4455</p>
                     </div>
                 </div>
                 <div className="flex items-start gap-4">

@@ -17,7 +17,7 @@ const TabInSingleProduct = () => {
                     </p>
                     <p>
                         The unique circular pattern adds a touch of modern flair, making this t-shirt a versatile piece that can
-                        be dressed up or down. Whether you're running errands or enjoying a casual weekend, the Acme Circles
+                        be dressed up or down. Whether you are running errands or enjoying a casual weekend, the Acme Circles
                         T-Shirt is the perfect choice.
                     </p>
                 </div>

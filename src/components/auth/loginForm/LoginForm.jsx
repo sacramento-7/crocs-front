@@ -39,8 +39,13 @@ const LoginForm = () => {
         try {
             const response = await axios.post('http://localhost:3000/api/login', data).then((res) => {
                 if (res.data.error) {
-                    setErrorMessage('Phone Number or Password is wrong!');
-                    return;
+                    if (res.data.error.status == 400) {
+                        setErrorMessage('Phone Number or Password is wrong!');
+                        return;
+                    } else {
+                        setErrorMessage('Something went wrong!')
+                        return;
+                    }
                 }
 
                 key = res.data.key;
@@ -49,7 +54,7 @@ const LoginForm = () => {
 
             });
 
-            if (key !== undefined && key !== null) {
+            if (key !== undefined && key !== null && key !== '') {
                 Cookies.set('Token', key, { path: '/', secure: true, sameSite: 'strict', expires: 4 }); // Set cookie to expire in 4 days
                 router.push('/');
                 toast.success("You have successfully logged in!", {
@@ -60,7 +65,7 @@ const LoginForm = () => {
                     pauseOnHover: true,
                     draggable: true,
                     progress: undefined,
-                  });
+                });
 
                 //revalidatePath('/');
             }
@@ -150,7 +155,7 @@ const LoginForm = () => {
 
 
                 <p className="mt-10 text-center text-sm text-gray-500">
-                    Don't have an account?{' '}
+                    Do not have an account?{' '}
                     <Link href="/accounts/register" className="font-semibold leading-6 text-green-600 hover:text-green-500">
                         Sign-Up for a new account
                     </Link>

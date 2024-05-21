@@ -11,7 +11,7 @@ const ContactPage = () => {
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">Get in Touch</h1>
               <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                Have a question or want to work together? Fill out the form below and we'll get back to you as soon as
+                Have a question or want to work together? Fill out the form below and we will get back to you as soon as
                 possible.
               </p>
             </div>

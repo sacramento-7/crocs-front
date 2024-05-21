@@ -35,7 +35,7 @@ const AboutStory = () => {
                         <p className="text-gray-500 dark:text-gray-400">
                             Today, Acme Inc is a leading player in the e-commerce industry, recognized for our innovative
                             solutions, commitment to sustainability, and exceptional customer service. We continue to push the
-                            boundaries of what's possible in the world of online retail, always striving to deliver the best
+                            boundaries of what is possible in the world of online retail, always striving to deliver the best
                             possible experience for our customers.
                         </p>
                     </div>

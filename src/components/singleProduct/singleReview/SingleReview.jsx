@@ -17,9 +17,9 @@ const SingleReview = () => {
                 </div>
                 <div className="text-sm leading-loose text-gray-500 dark:text-gray-400">
                     <p>
-                        I've been wearing the Acme Circles T-Shirt for a few weeks now, and it's quickly become one of my
+                        I have been wearing the Acme Circles T-Shirt for a few weeks now, and it is quickly become one of my
                         favorite casual tops. The fabric is soft and breathable, and the unique circular pattern adds a
-                        fun, modern touch. I've received several compliments on it already.
+                        fun, modern touch. I have received several compliments on it already.
                     </p>
                 </div>
             </div>
