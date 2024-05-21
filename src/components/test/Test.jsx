@@ -6,20 +6,28 @@ import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
 import {
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu"
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
+
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 
 export function NavigationMenuDemo() {
-    return (
-        <div>Test</div>
-    )
+  return (
+    <div>Test</div>
+  )
 }
 
 
@@ -108,5 +116,81 @@ export function NavigationMenuDemo() {
                     </NavigationMenuItem>
                   </NavigationMenuList>
                 </NavigationMenu> */}
+
+
+
+
+{/* <DropdownMenu>
+                  <DropdownMenuTrigger asChild className={`${pathname.includes('/products/men') ? 'bg-black' : ''}`}>
+                    <Link
+                      href='/products/men'
+                      className='flex items-center text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
+                    >
+                      <span>Men</span>
+                      <FaChevronDown className='ml-1 mt-1' />
+                    </Link>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-40">
+                    <DropdownMenuGroup>
+                      <DropdownMenuItem className={`${pathname === '/products/men/sandal' ? 'bg-gray-900 text-white' : ''} mx-auto hover:bg-gray-900 hover:text-white rounded-md`}>
+                        <Link href='/products/men/sandal' className='mx-auto'>Sandal</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem className={`${pathname === '/products/men/clog' ? 'bg-gray-900 text-white' : ''} mx-auto hover:bg-gray-900 hover:text-white rounded-md`}>
+                        <Link href='/products/men/clog' className='mx-auto'>Clog</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem className={`${pathname === '/products/men/slides' ? 'bg-gray-900 text-white' : ''} mx-auto hover:bg-gray-900 hover:text-white rounded-md`}>
+                        <Link href='/products/men/slides' className='mx-auto'>Slides</Link>
+                      </DropdownMenuItem>
+                    </DropdownMenuGroup>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild className={`${pathname.includes('/products/women') ? 'bg-black' : ''}`}>
+                    <Link
+                      href='/products/women'
+                      className='flex items-center text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
+                    >
+                      <span>Women</span>
+                      <FaChevronDown className='ml-1 mt-1' />
+                    </Link>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-40">
+                    <DropdownMenuGroup>
+                      <DropdownMenuItem className={`${pathname === '/products/women/sandal' ? 'bg-gray-900 text-white' : ''} mx-auto hover:bg-gray-900 hover:text-white rounded-md`}>
+                        <Link href='/products/women/sandal' className='mx-auto'>Sandal</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem className={`${pathname === '/products/women/clog' ? 'bg-gray-900 text-white' : ''} mx-auto hover:bg-gray-900 hover:text-white rounded-md`}>
+                        <Link href='/products/women/clog' className='mx-auto'>Clog</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem className={`${pathname === '/products/women/slides' ? 'bg-gray-900 text-white' : ''} mx-auto hover:bg-gray-900 hover:text-white rounded-md`}>
+                        <Link href='/products/women/slides' className='mx-auto'>Slides</Link>
+                      </DropdownMenuItem>
+                    </DropdownMenuGroup>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild className={`${pathname.includes('/products/kids') ? 'bg-black' : ''}`}>
+                    <Link
+                      href='/products/kids'
+                      className='flex items-center text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
+                    >
+                      <span>Kids</span>
+                      <FaChevronDown className='ml-1 mt-1' />
+                    </Link>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-40">
+                    <DropdownMenuGroup>
+                      <DropdownMenuItem className={`${pathname === '/products/kids/sandal' ? 'bg-gray-900 text-white' : ''} mx-auto hover:bg-gray-900 hover:text-white rounded-md`}>
+                        <Link href='/products/kids/sandal' className='mx-auto'>Sandal</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem className={`${pathname === '/products/kids/clog' ? 'bg-gray-900 text-white' : ''} mx-auto hover:bg-gray-900 hover:text-white rounded-md`}>
+                        <Link href='/products/kids/clog' className='mx-auto'>Clog</Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem className={`${pathname === '/products/kids/slides' ? 'bg-gray-900 text-white' : ''} mx-auto hover:bg-gray-900 hover:text-white rounded-md`}>
+                        <Link href='/products/kids/slides' className='mx-auto'>Slides</Link>
+                      </DropdownMenuItem>
+                    </DropdownMenuGroup>
+                  </DropdownMenuContent>
+                </DropdownMenu> */}
 
 

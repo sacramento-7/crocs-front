@@ -4,16 +4,18 @@ import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '@/assets/images/logo2.png';
+import logo from '@/assets/images/logo4.png';
 import profileDefault from '@/assets/images/profile.png';
 import { FaGoogle, FaChevronDown } from 'react-icons/fa';
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
 import {
   Accordion,
   AccordionContent,
@@ -75,7 +77,7 @@ const Navbar = () => {
           <div className='flex flex-1 items-center justify-center md:items-stretch md:justify-start'>
             {/* <!-- Logo --> */}
             <Link className='flex flex-shrink-0 items-center' href='/'>
-              <Image className='h-10 w-auto' src={logo} alt='PropertyPulse' />
+              <Image className='h-10 w-auto' src={logo} alt='Crocs-Kish' />
               <span className='hidden md:block text-white text-2xl font-bold ml-2'>
                 Crocs
               </span>
@@ -83,85 +85,101 @@ const Navbar = () => {
             {/* <!-- Desktop Menu Hidden below md screens --> */}
             <div className='hidden md:ml-6 md:block'>
               <div className='flex space-x-2'>
-                <Link
+                {/* <Link
                   href='/products'
                   className={`${pathname === '/products' ? 'bg-black' : ''} text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2`}
                 >
                   Shop
-                </Link>
+                </Link> */}
 
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild className={`${pathname.includes('/products/men') ? 'bg-black' : ''}`}>
-                    <Link
-                      href='/products/men'
-                      className='flex items-center text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
-                    >
-                      <span>Men</span>
-                      <FaChevronDown className='ml-1 mt-1' />
-                    </Link>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-40">
-                    <DropdownMenuGroup>
-                      <DropdownMenuItem className={`${pathname === '/products/men/sandal' ? 'bg-gray-900 text-white' : ''} mx-auto hover:bg-gray-900 hover:text-white rounded-md`}>
-                        <Link href='/products/men/sandal' className='mx-auto'>Sandal</Link>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className={`${pathname === '/products/men/clog' ? 'bg-gray-900 text-white' : ''} mx-auto hover:bg-gray-900 hover:text-white rounded-md`}>
-                        <Link href='/products/men/clog' className='mx-auto'>Clog</Link>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className={`${pathname === '/products/men/slides' ? 'bg-gray-900 text-white' : ''} mx-auto hover:bg-gray-900 hover:text-white rounded-md`}>
-                        <Link href='/products/men/slides' className='mx-auto'>Slides</Link>
-                      </DropdownMenuItem>
-                    </DropdownMenuGroup>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild className={`${pathname.includes('/products/women') ? 'bg-black' : ''}`}>
-                    <Link
-                      href='/products/women'
-                      className='flex items-center text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
-                    >
-                      <span>Women</span>
-                      <FaChevronDown className='ml-1 mt-1' />
-                    </Link>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-40">
-                    <DropdownMenuGroup>
-                      <DropdownMenuItem className={`${pathname === '/products/women/sandal' ? 'bg-gray-900 text-white' : ''} mx-auto hover:bg-gray-900 hover:text-white rounded-md`}>
-                        <Link href='/products/women/sandal' className='mx-auto'>Sandal</Link>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className={`${pathname === '/products/women/clog' ? 'bg-gray-900 text-white' : ''} mx-auto hover:bg-gray-900 hover:text-white rounded-md`}>
-                        <Link href='/products/women/clog' className='mx-auto'>Clog</Link>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className={`${pathname === '/products/women/slides' ? 'bg-gray-900 text-white' : ''} mx-auto hover:bg-gray-900 hover:text-white rounded-md`}>
-                        <Link href='/products/women/slides' className='mx-auto'>Slides</Link>
-                      </DropdownMenuItem>
-                    </DropdownMenuGroup>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild className={`${pathname.includes('/products/kids') ? 'bg-black' : ''}`}>
-                    <Link
-                      href='/products/kids'
-                      className='flex items-center text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'
-                    >
-                      <span>Kids</span>
-                      <FaChevronDown className='ml-1 mt-1' />
-                    </Link>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-40">
-                    <DropdownMenuGroup>
-                      <DropdownMenuItem className={`${pathname === '/products/kids/sandal' ? 'bg-gray-900 text-white' : ''} mx-auto hover:bg-gray-900 hover:text-white rounded-md`}>
-                        <Link href='/products/kids/sandal' className='mx-auto'>Sandal</Link>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className={`${pathname === '/products/kids/clog' ? 'bg-gray-900 text-white' : ''} mx-auto hover:bg-gray-900 hover:text-white rounded-md`}>
-                        <Link href='/products/kids/clog' className='mx-auto'>Clog</Link>
-                      </DropdownMenuItem>
-                      <DropdownMenuItem className={`${pathname === '/products/kids/slides' ? 'bg-gray-900 text-white' : ''} mx-auto hover:bg-gray-900 hover:text-white rounded-md`}>
-                        <Link href='/products/kids/slides' className='mx-auto'>Slides</Link>
-                      </DropdownMenuItem>
-                    </DropdownMenuGroup>
-                  </DropdownMenuContent>
-                </DropdownMenu>
+
+                <NavigationMenu className='p-0'>
+                  <NavigationMenuList>
+                    <NavigationMenuItem>
+                      <NavigationMenuLink href='/products' className={`${navigationMenuTriggerStyle()} ${pathname === '/products' ? 'bg-black' : 'bg-transparent'}  text-white`}>
+                        <span href="/products" legacyBehavior passHref className=''>
+                          Shop
+                        </span>
+                      </NavigationMenuLink>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenu>
+
+                <NavigationMenu>
+                  <NavigationMenuList>
+                    <NavigationMenuItem>
+                      <NavigationMenuTrigger className={`${pathname.includes('/products/men') ? 'bg-black' : 'bg-transparent'}  text-white`}>
+                        <Link href='/products/men'>Men</Link>
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <NavigationMenuLink asChild className={`${pathname === '/products/men/clog' ? 'bg-gray-900 text-white' : ''} grid gap-3 p-2 md:w-[100px] lg:w-[150px]`}>
+                          <Link href='/products/men/clog' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>Clog</Link>
+                        </NavigationMenuLink>
+                        <NavigationMenuLink asChild className={`${pathname === '/products/men/sandal' ? 'bg-gray-900 text-white' : ''} grid gap-3 p-2 md:w-[100px] lg:w-[150px]`}>
+                          <Link href='/products/men/sandal' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>Sandal</Link>
+                        </NavigationMenuLink>
+                        <NavigationMenuLink asChild className={`${pathname === '/products/men/slides' ? 'bg-gray-900 text-white' : ''} grid gap-3 p-2 md:w-[100px] lg:w-[150px]`}>
+                          <Link href='/products/men/slides' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>Slides</Link>
+                        </NavigationMenuLink>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenu>
+
+                <NavigationMenu>
+                  <NavigationMenuList>
+                    <NavigationMenuItem>
+                      <NavigationMenuTrigger className={`${pathname.includes('/products/women') ? 'bg-black' : 'bg-transparent'}  text-white`}>
+                        <Link href='/products/women'>Women</Link>
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <NavigationMenuLink asChild className={`${pathname === '/products/women/clog' ? 'bg-gray-900 text-white' : ''} grid gap-3 p-2 md:w-[100px] lg:w-[150px]`}>
+                          <Link href='/products/women/clog' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>Clog</Link>
+                        </NavigationMenuLink>
+                        <NavigationMenuLink asChild className={`${pathname === '/products/women/sandal' ? 'bg-gray-900 text-white' : ''} grid gap-3 p-2 md:w-[100px] lg:w-[150px]`}>
+                          <Link href='/products/women/sandal' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>Sandal</Link>
+                        </NavigationMenuLink>
+                        <NavigationMenuLink asChild className={`${pathname === '/products/women/slides' ? 'bg-gray-900 text-white' : ''} grid gap-3 p-2 md:w-[100px] lg:w-[150px]`}>
+                          <Link href='/products/women/slides' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>Slides</Link>
+                        </NavigationMenuLink>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenu>
+
+                <NavigationMenu>
+                  <NavigationMenuList>
+                    <NavigationMenuItem>
+                      <NavigationMenuTrigger className={`${pathname.includes('/products/kids') ? 'bg-black' : 'bg-transparent'}  text-white`}>
+                        <Link href='/products/kids'>Kids</Link>
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <NavigationMenuLink asChild className={`${pathname === '/products/kids/clog' ? 'bg-gray-900 text-white' : ''} grid gap-3 p-2 md:w-[100px] lg:w-[150px]`}>
+                          <Link href='/products/kids/clog' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>Clog</Link>
+                        </NavigationMenuLink>
+                        <NavigationMenuLink asChild className={`${pathname === '/products/kids/sandal' ? 'bg-gray-900 text-white' : ''} grid gap-3 p-2 md:w-[100px] lg:w-[150px]`}>
+                          <Link href='/products/kids/sandal' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>Sandal</Link>
+                        </NavigationMenuLink>
+                        <NavigationMenuLink asChild className={`${pathname === '/products/kids/slides' ? 'bg-gray-900 text-white' : ''} grid gap-3 p-2 md:w-[100px] lg:w-[150px]`}>
+                          <Link href='/products/kids/slides' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>Slides</Link>
+                        </NavigationMenuLink>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenu>
+
+                <NavigationMenu className='p-0'>
+                  <NavigationMenuList>
+                    <NavigationMenuItem>
+                      <NavigationMenuLink href='/admin' className={`${navigationMenuTriggerStyle()} ${pathname.includes('/admin') ? 'bg-black' : 'bg-transparent'}  text-white`}>
+                        <span href="/admin" legacyBehavior passHref className=''>
+                          Admin
+                        </span>
+                      </NavigationMenuLink>
+                    </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenu>
+
               </div>
             </div>
           </div>
