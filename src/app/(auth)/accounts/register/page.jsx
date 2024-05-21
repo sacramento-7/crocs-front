@@ -1,6 +1,6 @@
 import RegisterForm from "@/components/auth/registerForm/RegisterForm"
 
-const page = () => {
+const RegisterPage = () => {
     return (
         <>
             <RegisterForm />
@@ -8,4 +8,4 @@ const page = () => {
     )
 }
 
-export default page
+export default RegisterPage

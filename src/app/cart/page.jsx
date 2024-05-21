@@ -6,7 +6,7 @@ import Image from "next/image";
 import { FaMinus, FaPlus, FaRegTrashAlt } from "react-icons/fa";
 import Link from "next/link";
 
-const page = () => {
+const CartPage = () => {
     return (
         <div className="container mx-auto py-8 px-4 md:px-6 lg:px-8">
             <h1 className="text-2xl font-bold mb-6">Your Cart</h1>
@@ -147,4 +147,4 @@ const page = () => {
     )
 }
 
-export default page
+export default CartPage
