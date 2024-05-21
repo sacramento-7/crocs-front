@@ -10,7 +10,7 @@ import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import Cookies from 'js-cookie';
 import { useEffect, useState } from 'react';
-import { useAuth } from '@/context/AuthContext';
+import { UseAuth } from '@/context/AuthContext';
 import { toast } from 'react-toastify';
 
 
@@ -29,7 +29,7 @@ const LoginForm = () => {
     });
     const [errorMessage, setErrorMessage] = useState(null);
     //const [key, setKey] = useState(null);
-    const { setToken } = useAuth();
+    const { setToken } = UseAuth();
 
     const router = useRouter();
 

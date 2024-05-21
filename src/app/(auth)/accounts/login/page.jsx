@@ -1,17 +1,24 @@
 'use client';
 
 import LoginForm from "@/components/auth/loginForm/LoginForm";
-import { useAuth } from '@/context/AuthContext';
-import { redirect, useRouter } from "next/navigation";
+import { UseAuth } from '@/context/AuthContext';
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 const page = () => {
-    const { token } = useAuth();
+    const { token } = UseAuth();
     const router = useRouter();
-    if(token){
-        //router.push("/");
-        redirect('/');
-        //return;
-    }
+    //const router = useRouter();
+    // if (token) {
+    //     //router.push("/");
+    //     redirect('/');
+    //     //return;
+    // }
+    useEffect(() => {
+        if (token) {
+            router.push('/');
+        }
+    }, [token, router])
 
     return (
         <>

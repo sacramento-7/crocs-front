@@ -32,13 +32,13 @@ import {
 import { Button } from "@/components/ui/button";
 import CartSheet from '../cartSheet/CartSheet';
 import Cookies from 'js-cookie';
-import { useAuth } from '@/context/AuthContext';
+import { UseAuth } from '@/context/AuthContext';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   //const [isLoggedIn, setIsLoggedIn] = useState(true);
   // const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
-  const { token, setToken } = useAuth();
+  const { token, setToken } = UseAuth();
 
   const pathname = usePathname();
 
