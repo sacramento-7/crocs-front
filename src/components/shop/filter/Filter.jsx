@@ -9,20 +9,20 @@ const Filter = () => {
         <div className="flex flex-col gap-6">
             <Accordion collapsible type="single">
                 <AccordionItem value="category">
-                    <AccordionTrigger className="text-lg font-medium">Category</AccordionTrigger>
+                    <AccordionTrigger className="text-lg font-medium">دسته بندی</AccordionTrigger>
                     <AccordionContent>
                         <div className="grid gap-2 py-4">
                             <Label className="flex items-center gap-2 font-normal">
                                 <Checkbox id="men" />
-                                Men{"\n                            "}
+                                مردانه{"\n                            "}
                             </Label>
                             <Label className="flex items-center gap-2 font-normal">
                                 <Checkbox id="Women" />
-                                Women{"\n                            "}
+                                زنانه{"\n                            "}
                             </Label>
                             <Label className="flex items-center gap-2 font-normal">
                                 <Checkbox id="kids" />
-                                Kids{"\n                            "}
+                                بچه گانه{"\n                            "}
                             </Label>
                         </div>
                     </AccordionContent>
@@ -30,58 +30,58 @@ const Filter = () => {
             </Accordion>
             <Accordion collapsible type="single">
                 <AccordionItem value="price">
-                    <AccordionTrigger className="text-lg font-medium">Price Range</AccordionTrigger>
+                    <AccordionTrigger className="text-lg font-medium">محدوده قیمت</AccordionTrigger>
                     <AccordionContent>
                         <div className="grid gap-4 py-4">
                             <div className="grid gap-2">
                                 <Label className="text-sm font-medium" htmlFor="price-min">
-                                    Min Price
+                                    قیمت از
                                 </Label>
                                 <Input id="price-min" placeholder="0" type="number" />
                             </div>
                             <div className="grid gap-2">
                                 <Label className="text-sm font-medium" htmlFor="price-max">
-                                    Max Price
+                                    تا قیمت
                                 </Label>
                                 <Input id="price-max" placeholder="1000" type="number" />
                             </div>
-                            <Button size="sm">Apply</Button>
+                            <Button size="sm">ثبت</Button>
                         </div>
                     </AccordionContent>
                 </AccordionItem>
             </Accordion>
             <Accordion collapsible type="single">
                 <AccordionItem value="rating">
-                    <AccordionTrigger className="text-lg font-medium">Color</AccordionTrigger>
+                    <AccordionTrigger className="text-lg font-medium">رنگ</AccordionTrigger>
                     <AccordionContent>
                         <div className="grid gap-2 py-4">
                             <Label className="flex items-center gap-2 font-normal">
                             <span className="w-3 h-3 rounded-full bg-black"></span><Checkbox id="black" />
-                                Black{"\n                            "}
+                                مشکی{"\n                            "}
                             </Label>
                             <Label className="flex items-center gap-2 font-normal">
                             <span className="w-3 h-3 rounded-full bg-white border"></span><Checkbox id="white" />
-                                White{"\n                            "}
+                                سفید{"\n                            "}
                             </Label>
                             <Label className="flex items-center gap-2 font-normal">
                             <span className="w-3 h-3 rounded-full bg-red-700"></span><Checkbox id="red" />
-                                Red{"\n                            "}
+                                قرمز{"\n                            "}
                             </Label>
                             <Label className="flex items-center gap-2 font-normal">
                             <span className="w-3 h-3 rounded-full bg-blue-700"></span><Checkbox id="blue" />
-                                Blue{"\n                            "}
+                                آبی{"\n                            "}
                             </Label>
                             <Label className="flex items-center gap-2 font-normal">
                             <span className="w-3 h-3 rounded-full bg-yellow-300"></span><Checkbox id="yellow" />
-                                Yellow{"\n                            "}
+                                زرد{"\n                            "}
                             </Label>
                             <Label className="flex items-center gap-2 font-normal">
                             <span className="w-3 h-3 rounded-full bg-pink-400"></span><Checkbox id="pink" />
-                                Pink{"\n                            "}
+                                صورتی{"\n                            "}
                             </Label>
                             <Label className="flex items-center gap-2 font-normal">
                             <span className="w-3 h-3 rounded-full bg-green-500"></span><Checkbox id="green" />
-                                Green{"\n                            "}
+                                سبز{"\n                            "}
                             </Label>
                         </div>
                     </AccordionContent>

@@ -9,10 +9,9 @@ const ContactPage = () => {
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_550px]">
           <div className="space-y-4">
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">Get in Touch</h1>
+              <h1 className="text-2xl font-bold tracking-tighter sm:text-3xl xl:text-4xl/none">با ما در تماس باشید</h1>
               <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                Have a question or want to work together? Fill out the form below and we will get back to you as soon as
-                possible.
+                اگر سوال، پیشنهاد و یا انتقادی دارید، فرم زیر را پر کنید و ما در اسرع وقت با شما تماس خواهیم گرفت.
               </p>
             </div>
             <ContactForm />

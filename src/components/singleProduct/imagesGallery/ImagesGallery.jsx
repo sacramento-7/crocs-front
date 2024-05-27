@@ -11,7 +11,7 @@ import {
 
 const ImagesGallery = () => {
   return (
-    <div className="grid gap-4">
+    <div className="grid gap-4" style={{direction: 'ltr'}}>
       <div className="aspect-square overflow-hidden rounded-lg">
         <Image
           alt="Product Image"

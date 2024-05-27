@@ -1,4 +1,4 @@
-import { FaSlash } from "react-icons/fa";
+import { TbSlash } from "react-icons/tb";
 
 import {
     Breadcrumb,
@@ -14,19 +14,19 @@ const MyBreadCrumb = () => {
         <Breadcrumb>
             <BreadcrumbList>
                 <BreadcrumbItem>
-                    <BreadcrumbLink href="/">Home</BreadcrumbLink>
+                    <BreadcrumbLink href="/">خانه</BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator>
-                    <FaSlash />
+                    <TbSlash />
                 </BreadcrumbSeparator>
                 <BreadcrumbItem>
-                    <BreadcrumbLink href="/components">Components</BreadcrumbLink>
+                    <BreadcrumbLink href="/components">فروشگاه</BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator>
-                    <FaSlash />
+                    <TbSlash />
                 </BreadcrumbSeparator>
                 <BreadcrumbItem>
-                    <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+                    <BreadcrumbPage>کراکس</BreadcrumbPage>
                 </BreadcrumbItem>
             </BreadcrumbList>
         </Breadcrumb>

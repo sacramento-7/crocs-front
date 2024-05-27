@@ -1,8 +1,7 @@
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-
-import Image from "next/image"
-import logo from '@/assets/images/logo1.png'
+import Image from "next/image";
+import logo from '@/assets/images/logo1.png';
 
 const hero = () => {
     return (
@@ -13,17 +12,16 @@ const hero = () => {
                         <div className="flex flex-col justify-center space-y-4">
                             <div className="space-y-2">
                                 <h1 className="text-3xl font-bold tracking-tighter sm:text-3xl md:text-4xl xl:text-6xl/none">
-                                    Make your style by CROCS Products
+                                    استایل خود را با محصولات کراکس بسازید
                                 </h1>
                                 <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                                    Streamline your web development workflow with our cutting-edge platform. Unleash your creativity and
-                                    focus on building exceptional user experiences.
+                                کراکس یک برند جهانی معروف است که به تولید کفش‌های راحتی، سبک و با دوام می‌پردازد. محصولات کراکس با استفاده از مواد اولیه‌ی خاص و فناوری‌های پیشرفته، راحتی و کارایی بی‌نظیری را به کاربران ارائه می‌دهند. از کفش‌های کلاسیک و دمپایی‌های راحتی گرفته تا کفش‌های اسپرت و حرفه‌ای، کراکس انتخابی ایده‌آل برای هر روز و هر موقعیت است. با کراکس، تجربه‌ی راحتی واقعی را احساس کنید.
                                 </p>
                             </div>
                             <div className="w-full max-w-sm space-y-2">
-                                <form className="flex space-x-2">
-                                    <Input className="max-w-lg flex-1" placeholder="Search your products ..." type="text" />
-                                    <Button type="submit">Search</Button>
+                                <form className="flex">
+                                    <Input className="max-w-lg flex-1" placeholder="محصول خود را بیابید ..." type="text" />
+                                    <Button type="submit" className="mr-1">جستجو</Button>
                                 </form>
                             </div>
                         </div>

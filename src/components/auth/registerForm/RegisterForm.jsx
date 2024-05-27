@@ -12,9 +12,9 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 
 const schema = yup.object({
-    phone: yup.string().required('Please enter your Phone Number'),
-    password: yup.string().required('Password is required').min(6, 'Password must be at least 6 characters'),
-    password2: yup.string().oneOf([yup.ref('password'), null], 'Passwords does not match'),
+    phone: yup.string().required('تلفن همراه الزامی است'),
+    password: yup.string().required('رمز عبور دلخواه خود را وارد کنید').min(6, 'رمز عبور باید شامل حداقل 6 کاراکتر باشد'),
+    password2: yup.string().oneOf([yup.ref('password'), null], 'رمزهای عبور وارد شده بایستی یکسان باشند'),
 }).required();
 
 const RegisterForm = () => {
@@ -42,7 +42,7 @@ const RegisterForm = () => {
                 console.log(res.data);
                 if (res.data.resp.message) {
                     router.push('/accounts/login');
-                    toast.success("You have successfully registered!", {
+                    toast.success("با موفقیت وارد شدید!", {
                         position: "bottom-right",
                         autoClose: 4000,
                         hideProgressBar: false,
@@ -72,15 +72,15 @@ const RegisterForm = () => {
                     alt="Your Company"
                 />
                 <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-                    Create a new account
+                    ایجاد حساب کاربری جدید
                 </h2>
             </div>
 
             <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                 <form className="space-y-6" onSubmit={handleSubmit(submitHandler)}>
                     <div>
-                        <label htmlFor="phone" className="block text-sm font-medium leading-6 text-gray-900">
-                            Phone Number
+                        <label htmlFor="phone" className="block text-sm font-bold leading-6 text-gray-900">
+                            تلفن همراه
                         </label>
                         <div className="mt-2">
                             <input
@@ -103,8 +103,8 @@ const RegisterForm = () => {
 
                     <div>
                         <div className="flex items-center justify-between">
-                            <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
-                                Password
+                            <label htmlFor="password" className="block text-sm font-bold leading-6 text-gray-900">
+                                رمز عبور
                             </label>
                         </div>
                         <div className="mt-2">
@@ -115,6 +115,7 @@ const RegisterForm = () => {
                                 name="password"
                                 type="password"
                                 autoComplete="current-password"
+                                placeholder='Ab%Gh2T#'
                                 className="block w-full rounded-md border-0 py-1.5 px-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                             />
                             {errors.password?.message && (
@@ -127,8 +128,8 @@ const RegisterForm = () => {
 
                     <div>
                         <div className="flex items-center justify-between">
-                            <label htmlFor="confirmPassword" className="block text-sm font-medium leading-6 text-gray-900">
-                                Confirm Password
+                            <label htmlFor="confirmPassword" className="block text-sm font-bold leading-6 text-gray-900">
+                                تکرار رمز عبور
                             </label>
                         </div>
                         <div className="mt-2">
@@ -159,15 +160,15 @@ const RegisterForm = () => {
                             type="submit"
                             className="flex w-full justify-center rounded-md bg-green-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                         >
-                            Sign up
+                            ثبت نام
                         </button>
                     </div>
                 </form>
 
                 <p className="mt-10 text-center text-sm text-gray-500">
-                    Already have an account?{' '}
+                    دارای حساب کاربری هستید؟{' '}
                     <Link href="/accounts/login" className="font-semibold leading-6 text-green-600 hover:text-green-500">
-                        Sign-In to your account
+                        ورود به حساب کاربری
                     </Link>
                 </p>
             </div>

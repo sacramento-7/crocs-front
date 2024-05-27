@@ -3,7 +3,7 @@ import { PaginationPrevious, PaginationItem, PaginationLink, PaginationEllipsis,
 const PaginationProducts = () => {
     return (
         // <div className="bg-white dark:bg-gray-900 px-4 md:px-6 py-6">
-            <Pagination>
+            <Pagination style={{direction: 'ltr'}}>
                 <PaginationContent>
                     <PaginationItem>
                         <PaginationPrevious href="#" />

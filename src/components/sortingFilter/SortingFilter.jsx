@@ -14,20 +14,20 @@ const SortingFilter = () => {
         <div className="px-8">
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                    <Button variant="outline">Sort by <FaChevronDown className='ml-1 mt-1' /></Button>
+                    <Button variant="outline">مرتب شده با<FaChevronDown className='mr-1 mt-1' /></Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-40">
-                    <DropdownMenuGroup>
+                    <DropdownMenuGroup style={{direction: 'rtl'}}>
                         <DropdownMenuItem>
-                            <span>Newest</span>
+                            <span>جدیدترین</span>
                         </DropdownMenuItem>
                         <DropdownMenuSeparator />
                         <DropdownMenuItem>
-                            <span>Price: High to Low</span>
+                            <span>قیمت: بالا به پایین</span>
                         </DropdownMenuItem>
                         <DropdownMenuSeparator />
                         <DropdownMenuItem>
-                            <span>Price: Low to High</span>
+                            <span>قیمت: پایین به بالا</span>
                         </DropdownMenuItem>
                     </DropdownMenuGroup>
                 </DropdownMenuContent>

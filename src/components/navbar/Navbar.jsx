@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import logo from '@/assets/images/logo4.png';
 import profileDefault from '@/assets/images/profile.png';
-import { FaGoogle, FaChevronDown } from 'react-icons/fa';
+import { FaSignInAlt } from 'react-icons/fa';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -104,8 +104,8 @@ const Navbar = () => {
                   <NavigationMenuList>
                     <NavigationMenuItem>
                       <NavigationMenuLink href='/products' className={`${navigationMenuTriggerStyle()} ${pathname === '/products' ? 'bg-black' : 'bg-transparent'}  text-white`}>
-                        <span href="/products" legacyBehavior passHref className=''>
-                          Shop
+                        <span href="/products" className=''>
+                          فروشگاه
                         </span>
                       </NavigationMenuLink>
                     </NavigationMenuItem>
@@ -116,17 +116,17 @@ const Navbar = () => {
                   <NavigationMenuList>
                     <NavigationMenuItem>
                       <NavigationMenuTrigger className={`${pathname.includes('/products/men') ? 'bg-black' : 'bg-transparent'}  text-white`}>
-                        <Link href='/products/men'>Men</Link>
+                        <Link href='/products/men'>مردانه</Link>
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
                         <NavigationMenuLink asChild className={`${pathname === '/products/men/clog' ? 'bg-gray-900 text-white' : ''} grid gap-3 p-2 md:w-[100px] lg:w-[150px]`}>
-                          <Link href='/products/men/clog' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>Clog</Link>
+                          <Link href='/products/men/clog' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>کفش راحتی</Link>
                         </NavigationMenuLink>
                         <NavigationMenuLink asChild className={`${pathname === '/products/men/sandal' ? 'bg-gray-900 text-white' : ''} grid gap-3 p-2 md:w-[100px] lg:w-[150px]`}>
-                          <Link href='/products/men/sandal' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>Sandal</Link>
+                          <Link href='/products/men/sandal' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>صندل</Link>
                         </NavigationMenuLink>
                         <NavigationMenuLink asChild className={`${pathname === '/products/men/slides' ? 'bg-gray-900 text-white' : ''} grid gap-3 p-2 md:w-[100px] lg:w-[150px]`}>
-                          <Link href='/products/men/slides' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>Slides</Link>
+                          <Link href='/products/men/slides' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>دمپایی</Link>
                         </NavigationMenuLink>
                       </NavigationMenuContent>
                     </NavigationMenuItem>
@@ -137,17 +137,17 @@ const Navbar = () => {
                   <NavigationMenuList>
                     <NavigationMenuItem>
                       <NavigationMenuTrigger className={`${pathname.includes('/products/women') ? 'bg-black' : 'bg-transparent'}  text-white`}>
-                        <Link href='/products/women'>Women</Link>
+                        <Link href='/products/women'>زنانه</Link>
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
                         <NavigationMenuLink asChild className={`${pathname === '/products/women/clog' ? 'bg-gray-900 text-white' : ''} grid gap-3 p-2 md:w-[100px] lg:w-[150px]`}>
-                          <Link href='/products/women/clog' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>Clog</Link>
+                          <Link href='/products/women/clog' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>کفش راحتی</Link>
                         </NavigationMenuLink>
                         <NavigationMenuLink asChild className={`${pathname === '/products/women/sandal' ? 'bg-gray-900 text-white' : ''} grid gap-3 p-2 md:w-[100px] lg:w-[150px]`}>
-                          <Link href='/products/women/sandal' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>Sandal</Link>
+                          <Link href='/products/women/sandal' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>صندل</Link>
                         </NavigationMenuLink>
                         <NavigationMenuLink asChild className={`${pathname === '/products/women/slides' ? 'bg-gray-900 text-white' : ''} grid gap-3 p-2 md:w-[100px] lg:w-[150px]`}>
-                          <Link href='/products/women/slides' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>Slides</Link>
+                          <Link href='/products/women/slides' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>دمپایی</Link>
                         </NavigationMenuLink>
                       </NavigationMenuContent>
                     </NavigationMenuItem>
@@ -158,17 +158,17 @@ const Navbar = () => {
                   <NavigationMenuList>
                     <NavigationMenuItem>
                       <NavigationMenuTrigger className={`${pathname.includes('/products/kids') ? 'bg-black' : 'bg-transparent'}  text-white`}>
-                        <Link href='/products/kids'>Kids</Link>
+                        <Link href='/products/kids'>بچه گانه</Link>
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
                         <NavigationMenuLink asChild className={`${pathname === '/products/kids/clog' ? 'bg-gray-900 text-white' : ''} grid gap-3 p-2 md:w-[100px] lg:w-[150px]`}>
-                          <Link href='/products/kids/clog' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>Clog</Link>
+                          <Link href='/products/kids/clog' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>کفش راحتی</Link>
                         </NavigationMenuLink>
                         <NavigationMenuLink asChild className={`${pathname === '/products/kids/sandal' ? 'bg-gray-900 text-white' : ''} grid gap-3 p-2 md:w-[100px] lg:w-[150px]`}>
-                          <Link href='/products/kids/sandal' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>Sandal</Link>
+                          <Link href='/products/kids/sandal' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>صندل</Link>
                         </NavigationMenuLink>
                         <NavigationMenuLink asChild className={`${pathname === '/products/kids/slides' ? 'bg-gray-900 text-white' : ''} grid gap-3 p-2 md:w-[100px] lg:w-[150px]`}>
-                          <Link href='/products/kids/slides' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>Slides</Link>
+                          <Link href='/products/kids/slides' className='mx-auto hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'>دمپایی</Link>
                         </NavigationMenuLink>
                       </NavigationMenuContent>
                     </NavigationMenuItem>
@@ -179,8 +179,8 @@ const Navbar = () => {
                   <NavigationMenuList>
                     <NavigationMenuItem>
                       <NavigationMenuLink href='/admin' className={`${navigationMenuTriggerStyle()} ${pathname.includes('/admin') ? 'bg-black' : 'bg-transparent'}  text-white`}>
-                        <span href="/admin" legacyBehavior passHref className=''>
-                          Admin
+                        <span href="/admin" className=''>
+                          داشبورد
                         </span>
                       </NavigationMenuLink>
                     </NavigationMenuItem>
@@ -197,8 +197,8 @@ const Navbar = () => {
               <div className='flex items-center'>
                 <button className='flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'>
                   <Link href='/accounts/login' className='flex items-center'>
-                    <FaGoogle className='text-white mr-2' />
-                    <span>Login or Register</span>
+                    <FaSignInAlt className='text-white ml-2' />
+                    <span>ورود</span>
                   </Link>
                 </button>
               </div>
@@ -207,8 +207,8 @@ const Navbar = () => {
 
           {/* <!-- Right Side Menu (Logged In) --> */}
           {token && (
-            <div className='absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0'>
-              <Link href='/messages' className='relative group'>
+            <div className='absolute inset-y-0 left-0 flex items-center pl-2 md:static md:inset-auto md:mr-6 md:pl-0'>
+              <Link href='/messages' className='relative group mt-1'>
                 <button
                   type='button'
                   className='relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'
@@ -236,7 +236,7 @@ const Navbar = () => {
                 </span>
               </Link>
               {/* <!-- Profile dropdown button --> */}
-              <div className='relative ml-3'>
+              <div className='relative mr-2'>
                 {/* <!-- Profile dropdown --> */}
                 <div>
                   <DropdownMenu>
@@ -260,20 +260,20 @@ const Navbar = () => {
                     <DropdownMenuContent className="w-40">
                       <DropdownMenuGroup>
                         <DropdownMenuItem className={`${pathname === '/profile' ? 'bg-gray-900 text-white' : ''} mx-auto hover:bg-gray-900 hover:text-white rounded-md`}>
-                          <Link href='/profile' className='mx-auto'>Your Profile</Link>
+                          <Link href='/profile' className='mx-auto'>پروفایل</Link>
                         </DropdownMenuItem>
                         <DropdownMenuItem className={`${pathname === '/products/saved' ? 'bg-gray-900 text-white' : ''} mx-auto hover:bg-gray-900 hover:text-white rounded-md`}>
-                          <Link href='/products/saved' className='mx-auto'>Wishlist</Link>
+                          <Link href='/products/saved' className='mx-auto'>لیست علاقه مندی ها</Link>
                         </DropdownMenuItem>
                         <DropdownMenuItem>
-                          <Button onClick={handleLogout} className='mx-auto'>Sign Out</Button>
+                          <Button onClick={handleLogout} className='mx-auto'>خروج</Button>
                         </DropdownMenuItem>
                       </DropdownMenuGroup>
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>
               </div>
-              <div className='relative'>
+              <div className='relative mt-1 mr-1'>
                 <div>
                   <CartSheet itemsCount={3} />
                 </div>
@@ -292,13 +292,13 @@ const Navbar = () => {
                 href='/'
                 className={`${pathname === '/' ? 'bg-black' : ''} text-white block hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-base font-medium`}
               >
-                Home
+                خانه
               </Link>
               <Link
                 href='/products'
                 className={`${pathname === '/products' ? 'bg-black' : ''} text-white hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium`}
               >
-                Shop
+                فروشکاه
               </Link>
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="item-1" className='block'>
@@ -307,14 +307,14 @@ const Navbar = () => {
                       href='/products/men'
                       className={`${pathname.includes('/products/men') ? 'bg-black' : ''} flex items-center text-white hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-base font-medium`}
                     >
-                      <span>Men</span>
+                      <span>مردانه</span>
                       {/* <FaChevronDown className='ml-1 mt-1' /> */}
                     </Link>
                   </AccordionTrigger>
                   <AccordionContent>
-                    <Link href='/products/men/sandal' className={`${pathname === '/products/men/sandal' ? 'bg-gray-800' : ''} items-center text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-small`}>Sandal</Link>
-                    <Link href='/products/men/clog' className={`${pathname === '/products/men/clog' ? 'bg-gray-800' : ''} items-center text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-small`}>Clog</Link>
-                    <Link href='/products/men/slides' className={`${pathname === '/products/men/slides' ? 'bg-gray-800' : ''} items-center text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-small`}>Slides</Link>
+                    <Link href='/products/men/sandal' className={`${pathname === '/products/men/sandal' ? 'bg-gray-800' : ''} items-center text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-small`}>صندل</Link>
+                    <Link href='/products/men/clog' className={`${pathname === '/products/men/clog' ? 'bg-gray-800' : ''} items-center text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-small`}>کفش راحتی</Link>
+                    <Link href='/products/men/slides' className={`${pathname === '/products/men/slides' ? 'bg-gray-800' : ''} items-center text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-small`}>دمپایی</Link>
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2">
@@ -323,13 +323,13 @@ const Navbar = () => {
                       href='/products/women'
                       className={`${pathname.includes('/products/women') ? 'bg-black' : ''} flex items-center text-white hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-base font-medium`}
                     >
-                      <span>Women</span>
+                      <span>زنانه</span>
                     </Link>
                   </AccordionTrigger>
                   <AccordionContent>
-                    <Link href='/products/women/sandal' className={`${pathname === '/products/women/sandal' ? 'bg-gray-800' : ''} flex items-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-base font-small`}>Sandal</Link>
-                    <Link href='/products/women/clog' className={`${pathname === '/products/women/clog' ? 'bg-gray-800' : ''} flex items-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-base font-small`}>Clog</Link>
-                    <Link href='/products/women/slides' className={`${pathname === '/products/men/slides' ? 'bg-gray-800' : ''} flex items-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-base font-small`}>Slides</Link>
+                    <Link href='/products/women/sandal' className={`${pathname === '/products/women/sandal' ? 'bg-gray-800' : ''} flex items-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-base font-small`}>صندل</Link>
+                    <Link href='/products/women/clog' className={`${pathname === '/products/women/clog' ? 'bg-gray-800' : ''} flex items-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-base font-small`}>کفش راحتی</Link>
+                    <Link href='/products/women/slides' className={`${pathname === '/products/men/slides' ? 'bg-gray-800' : ''} flex items-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-base font-small`}>دمپایی</Link>
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-3">
@@ -338,20 +338,20 @@ const Navbar = () => {
                       href='/products/kids'
                       className={`${pathname.includes('/products/kids') ? 'bg-black' : ''} flex items-center text-white hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-base font-medium`}
                     >
-                      <span>Kids</span>
+                      <span>بچه گانه</span>
                     </Link>
                   </AccordionTrigger>
                   <AccordionContent>
-                    <Link href='/products/kids/sandal' className={`${pathname === '/products/kids/sandal' ? 'bg-gray-800' : ''} flex items-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-base font-small`}>Sandal</Link>
-                    <Link href='/products/kids/clog' className={`${pathname === '/products/kids/clog' ? 'bg-gray-800' : ''} flex items-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-base font-small`}>Clog</Link>
-                    <Link href='/products/kids/slides' className={`${pathname === '/products/kids/slides' ? 'bg-gray-800' : ''} flex items-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-base font-small`}>Slides</Link>
+                    <Link href='/products/kids/sandal' className={`${pathname === '/products/kids/sandal' ? 'bg-gray-800' : ''} flex items-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-base font-small`}>صندل</Link>
+                    <Link href='/products/kids/clog' className={`${pathname === '/products/kids/clog' ? 'bg-gray-800' : ''} flex items-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-base font-small`}>کفش راحتی</Link>
+                    <Link href='/products/kids/slides' className={`${pathname === '/products/kids/slides' ? 'bg-gray-800' : ''} flex items-center text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-base font-small`}>دمپایی</Link>
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
               {!token && (
                 <button className='flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 my-4'>
-                  <FaGoogle className='text-white mr-2' />
-                  <span>Login or Register</span>
+                  <FaSignInAlt className='text-white ml-2' />
+                  <span>ورود</span>
                 </button>
               )}
             </div>

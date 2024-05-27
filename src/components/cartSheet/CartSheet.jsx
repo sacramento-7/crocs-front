@@ -28,8 +28,8 @@ const CartSheet = ({ itemsCount }) => {
             </SheetTrigger>
             <SheetContent className="w-full max-w-md" side="right">
                 <SheetHeader>
-                    <SheetTitle>Your Cart</SheetTitle>
-                    <SheetDescription>Review and update your cart items.</SheetDescription>
+                    <SheetTitle>سبد خرید شما</SheetTitle>
+                    <SheetDescription>مشاهده و بروزرسانی سبد خرید</SheetDescription>
                 </SheetHeader>
                 <div className="divide-y">
                     <div className="grid gap-4 p-4">
@@ -46,8 +46,8 @@ const CartSheet = ({ itemsCount }) => {
                                 width={80}
                             />
                             <div>
-                                <h4 className="font-medium">CottonSculpt Prism Tee</h4>
-                                <p className="text-sm text-gray-500 dark:text-gray-400">Color: Black, Size: M</p>
+                                <h4 className="font-medium">صندل کراکس</h4>
+                                <p className="text-sm text-gray-500 dark:text-gray-400">رنگ: مشکی ، سایز: 41</p>
                             </div>
                             <div className="flex items-center gap-2">
                                 <Button className="h-8 w-8" size="icon" variant="outline">
@@ -74,8 +74,8 @@ const CartSheet = ({ itemsCount }) => {
                                 width={80}
                             />
                             <div>
-                                <h4 className="font-medium">Aqua Filters</h4>
-                                <p className="text-sm text-gray-500 dark:text-gray-400">Color: White, Size: L</p>
+                                <h4 className="font-medium">کفش راحتی کراکس</h4>
+                                <p className="text-sm text-gray-500 dark:text-gray-400">رنگ: سفید ، سایز: 42</p>
                             </div>
                             <div className="flex items-center gap-2">
                                 <Button className="h-8 w-8" size="icon" variant="outline">
@@ -92,26 +92,26 @@ const CartSheet = ({ itemsCount }) => {
                     </div>
                     <div className="p-4">
                         <div className="flex items-center justify-between">
-                            <p>Subtotal</p>
+                            <p>مجموع خرید</p>
                             <p className="font-medium">$148.98</p>
                         </div>
                         <div className="mt-2 flex items-center justify-between">
-                            <p>Shipping</p>
+                            <p>هزینه ارسال</p>
                             <p className="font-medium">$9.99</p>
                         </div>
                         <div className="mt-2 flex items-center justify-between">
-                            <p>Total</p>
+                            <p>جمع کل</p>
                             <p className="text-2xl font-bold">$158.97</p>
                         </div>
                         <div className="mt-4 flex gap-2">
                             <SheetClose asChild>
                                 <Button className="flex-1" variant="outline" asChild>
-                                    <Link href='/products'>Continue Shopping</Link>
+                                    <Link href='/products'>ادامه خرید</Link>
                                 </Button>
                             </SheetClose>
                             <SheetClose asChild>
                                 <Button className="flex-1" asChild>
-                                    <Link href='/cart'>Your Cart</Link>
+                                    <Link href='/cart'>مشاهده سبد خرید</Link>
                                 </Button>
                             </SheetClose>
                         </div>

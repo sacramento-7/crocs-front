@@ -23,9 +23,9 @@ const AboutCard = () => {
                 />
             </CardHeader>
             <CardContent>
-                <h3 className="font-semibold text-lg md:text-xl lg:text-2xl">Stylish Sunglasses</h3>
+                <h3 className="font-semibold text-lg md:text-xl lg:text-2xl">کفش راحتی</h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Protect your eyes in style with our premium sunglasses.
+                کفش‌های راحتی کراکس؛ ترکیبی از سبک، راحتی و دوام برای تمام روز.
                 </p>
             </CardContent>
         </Card>

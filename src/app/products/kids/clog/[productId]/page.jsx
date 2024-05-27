@@ -11,7 +11,7 @@ const page = () => {
       <div className="grid gap-6">
         <div className="grid gap-2">
           <div className='flex justify-between'>
-            <h1 className="font-bold text-3xl">Clog men Product1</h1>
+            <h1 className="font-bold text-3xl">صندل بچه گانه کراکس</h1>
             <Button size="icon" variant="outline">
               <FaRegHeart className="w-5 h-5" />
             </Button>
@@ -20,9 +20,9 @@ const page = () => {
             </Button> */}
           </div>
           <div className="flex items-center gap-4">
-            <div className="text-4xl font-bold">$99</div>
+            <div className="text-4xl font-bold">65000 تومان</div>
           </div>
-          <p>60% combed ringspun cotton/40% polyester jersey tee.</p>
+          <p>ساخته شده از پلاستیک پی یو</p>
         </div>
         <div className='grid gap-2'>
           <form>
@@ -70,7 +70,7 @@ const page = () => {
               <FaPlus className="w-5 h-5" />
             </Button>
           </div>
-          <Button size="lg">Add To Cart</Button>
+          <Button size="lg">افزودن به سبد خرید</Button>
         </div>
         <TabInSingleProduct />
       </div>

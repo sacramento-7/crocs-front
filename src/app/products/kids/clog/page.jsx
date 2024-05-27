@@ -5,7 +5,7 @@ import PaginationProducts from "@/components/shop/paginationProducts/PaginationP
 
 const ClogPage = () => {
   return (
-    <div className="mx-auto px-4 py-8 md:py-12 lg:py-16">
+    <div className="container mx-auto px-4 py-8 md:py-12 lg:py-16 min-h-[100vh]">
       <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-8 px-4 md:px-6 py-8">
         <Filter />
         <ProductCards />

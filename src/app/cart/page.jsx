@@ -9,13 +9,13 @@ import Link from "next/link";
 const CartPage = () => {
     return (
         <div className="container mx-auto py-8 px-4 md:px-6 lg:px-8">
-            <h1 className="text-2xl font-bold mb-6">Your Cart</h1>
+            <h1 className="text-2xl font-bold mb-6">سبد خرید شما</h1>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="col-span-2">
                     <div className="bg-white rounded-lg shadow-md p-6 space-y-4">
                         <div className="flex items-center justify-between">
-                            <h2 className="text-lg font-medium">Cart Items</h2>
-                            <span className="text-gray-500">3 items</span>
+                            <h2 className="text-lg font-medium">کالاهای سبد خرید</h2>
+                            <span className="text-gray-500">3 مورد</span>
                         </div>
                         <div className="space-y-4">
                             <div className="grid grid-cols-[80px_1fr_auto] items-center gap-4">
@@ -31,8 +31,8 @@ const CartPage = () => {
                                     width={80}
                                 />
                                 <div>
-                                    <h3 className="text-base font-medium">Crocs Slides</h3>
-                                    <p className="text-gray-500 text-sm">Color: Black</p>
+                                    <h3 className="text-base font-medium">دمپایی کراکس</h3>
+                                    <p className="text-gray-500 text-sm">رنگ: مشکی</p>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Button size="icon" variant="outline" className='sm:size-sm'>
@@ -60,8 +60,8 @@ const CartPage = () => {
                                     width={80}
                                 />
                                 <div>
-                                    <h3 className="text-base font-medium">Crocs Clog</h3>
-                                    <p className="text-gray-500 text-sm">Color: Black</p>
+                                    <h3 className="text-base font-medium">صندل کراکس</h3>
+                                    <p className="text-gray-500 text-sm">رنگ: قرمز</p>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Button size="icon" variant="outline">
@@ -89,8 +89,8 @@ const CartPage = () => {
                                     width={80}
                                 />
                                 <div>
-                                    <h3 className="text-base font-medium">Crocs Sandal</h3>
-                                    <p className="text-gray-500 text-sm">Color: Black</p>
+                                    <h3 className="text-base font-medium">دمپایی کراکس</h3>
+                                    <p className="text-gray-500 text-sm">رنگ: زرد</p>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Button size="icon" variant="outline">
@@ -109,36 +109,36 @@ const CartPage = () => {
                     </div>
                 </div>
                 <div className="bg-white rounded-lg shadow-md p-6 space-y-4">
-                    <h2 className="text-lg font-medium">Cart Summary</h2>
+                    <h2 className="text-lg font-medium">خلاصه سبد خرید</h2>
                     <div className="space-y-2">
                         <div className="flex items-center justify-between">
-                            <span>Subtotal</span>
+                            <span>مجموع خرید</span>
                             <span>$250.00</span>
                         </div>
                         <div className="flex items-center justify-between">
-                            <span>Discount</span>
+                            <span>تخفیف</span>
                             <span className="text-green-500">-$25.00</span>
                         </div>
                         <div className="flex items-center justify-between">
-                            <span>Shipping</span>
+                            <span>هزینه ارسال</span>
                             <span>$10.00</span>
                         </div>
                         <Separator />
                         <div className="flex items-center justify-between font-medium">
-                            <span>Total</span>
+                            <span>جمع کل</span>
                             <span>$235.00</span>
                         </div>
                     </div>
                     <div className="space-y-2">
                         <div className="flex items-center gap-2">
-                            <Input className="flex-1" placeholder="Enter coupon code" type="text" />
-                            <Button size="sm">Apply</Button>
+                            <Input className="flex-1" placeholder="کد تخفیف خود را وارد کنید" type="text" />
+                            <Button size="sm">ثبت</Button>
                         </div>
                         <Button className="w-full" size="lg">
-                            Proceed to Checkout
+                            ادامه پرداخت
                         </Button>
                         <Button variant="outline" className="w-full" size="lg" asChild>
-                            <Link href='/products'>Continue to Shopping</Link>
+                            <Link href='/products'>ادامه خرید</Link>
                         </Button>
                     </div>
                 </div>

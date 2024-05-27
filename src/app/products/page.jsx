@@ -6,7 +6,7 @@ import SortingFilter from '@/components/sortingFilter/SortingFilter';
 
 const ProductsPage = () => {
   return (
-    <div className="mx-auto px-4 py-8 md:py-12 lg:py-16">
+    <div className="container mx-auto px-4 py-8 md:py-12 lg:py-16">
       <div className="grid grid-cols-1">
         <div className='hidden sm:flex justify-between'>
           <MyBreadCrumb />

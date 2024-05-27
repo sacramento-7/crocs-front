@@ -6,22 +6,22 @@ import { Textarea } from "@/components/ui/textarea";
 const FormReviewInSingleProduct = () => {
     return (
         <div className="grid gap-4">
-            <h2 className="font-bold text-lg">Leave a Review</h2>
-            <form className="grid gap-4">
+            <h2 className="font-bold text-lg">درج نظر</h2>
+            <form className="grid gap-4" style={{direction: "rtl"}}>
                 <div className="grid gap-2">
-                    <Label htmlFor="name">Name</Label>
-                    <Input id="name" placeholder="Your name" />
+                    <Label htmlFor="name">نام</Label>
+                    <Input id="name" placeholder="لطفا نام خود را بنویسید" />
                 </div>
                 <div className="grid gap-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input id="email" placeholder="Your email" type="email" />
+                    <Label htmlFor="email">ایمیل</Label>
+                    <Input id="email" placeholder="لطفا ایمیل خود را بنویسید" type="email" />
                 </div>
                 <div className="grid gap-2">
-                    <Label htmlFor="review">Review</Label>
-                    <Textarea id="review" placeholder="Write your review..." />
+                    <Label htmlFor="review">نظر</Label>
+                    <Textarea id="review" placeholder="لطفا نظر خود را بنویسید ..." />
                 </div>
                 <Button size="lg" type="submit">
-                    Submit Review
+                    ثبت نظر
                 </Button>
             </form>
         </div>

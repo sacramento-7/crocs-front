@@ -4,30 +4,24 @@ import ReviewInSingleProduct from "../reviewInSingleProduct/ReviewInSingleProduc
 const TabInSingleProduct = () => {
     return (
         <Tabs defaultValue="description">
-            <TabsList className="border-b">
-                <TabsTrigger value="description">Description</TabsTrigger>
-                <TabsTrigger value="details">Details</TabsTrigger>
-                <TabsTrigger value="reviews">Reviews</TabsTrigger>
+            <TabsList className="border-b" style={{direction: 'rtl'}}>
+                <TabsTrigger value="description">توضیحات</TabsTrigger>
+                <TabsTrigger value="details">جزییات</TabsTrigger>
+                <TabsTrigger value="reviews">نظرات</TabsTrigger>
             </TabsList>
             <TabsContent value="description">
                 <div className="grid gap-4 text-sm leading-loose">
                     <p>
-                        The Acme Circles T-Shirt is a stylish and comfortable addition to your wardrobe. Crafted from a blend of
-                        60% combed ringspun cotton and 40% polyester, this tee offers a soft and breathable feel.
-                    </p>
-                    <p>
-                        The unique circular pattern adds a touch of modern flair, making this t-shirt a versatile piece that can
-                        be dressed up or down. Whether you are running errands or enjoying a casual weekend, the Acme Circles
-                        T-Shirt is the perfect choice.
+                    صندل‌های برند کراکس با طراحی منحصربه‌فرد و استفاده از مواد اولیه‌ی با کیفیت، راحتی و دوام بی‌نظیری را ارائه می‌دهند. این صندل‌ها سبک، ضد آب و مناسب برای استفاده‌ی روزمره و تفریحات تابستانی هستند، و با بهره‌گیری از فناوری‌های پیشرفته، تجربه‌ای لذت‌بخش از راحتی و سلامت پاها را تضمین می‌کنند.
                     </p>
                 </div>
             </TabsContent>
             <TabsContent value="details">
                 <div className="grid gap-4 text-sm leading-loose">
-                    <p>Material: 60% combed ringspun cotton, 40% polyester</p>
-                    <p>Care Instructions: Machine wash cold, tumble dry low</p>
-                    <p>Fit: Regular</p>
-                    <p>Neck: Crew</p>
+                    <p>جنس: پلاستیک فشرده</p>
+                    <p>روش نگهداری: با پارچه نمدار تمیز شود</p>
+                    <p>استایل: روزمره</p>
+                    <p>جنسیت: یونیسکس</p>
                 </div>
             </TabsContent>
             <TabsContent value="reviews">
