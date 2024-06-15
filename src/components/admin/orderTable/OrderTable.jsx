@@ -5,16 +5,16 @@ import { FaArrowsAltH } from "react-icons/fa";
 
 const OrderTable = () => {
     return (
-        <Table>
-            <TableHeader>
+        <Table style={{ direction: 'rtl' }}>
+            <TableHeader style={{ direction: 'rtl' }}>
                 <TableRow>
-                    <TableHead className="w-[100px]">Order</TableHead>
-                    <TableHead className="min-w-[150px]">Customer</TableHead>
-                    <TableHead className="hidden md:table-cell">Channel</TableHead>
-                    <TableHead className="hidden md:table-cell">Date</TableHead>
-                    <TableHead className="text-right">Total</TableHead>
-                    <TableHead className="hidden sm:table-cell">Status</TableHead>
-                    <TableHead className="text-right">Actions</TableHead>
+                    <TableHead className="w-[100px] text-right">سفارش</TableHead>
+                    <TableHead className="min-w-[150px] text-right">مشتری</TableHead>
+                    <TableHead className="hidden md:table-cell text-right">کانال</TableHead>
+                    <TableHead className="hidden md:table-cell text-right">تاریخ</TableHead>
+                    <TableHead className="text-right">مبلغ</TableHead>
+                    <TableHead className="hidden sm:table-cell text-right">وضعیت</TableHead>
+                    <TableHead className="text-right">عملیات</TableHead>
                 </TableRow>
             </TableHeader>
             <TableBody>
@@ -34,8 +34,8 @@ const OrderTable = () => {
                                 </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end">
-                                <DropdownMenuItem>View order</DropdownMenuItem>
-                                <DropdownMenuItem>Customer details</DropdownMenuItem>
+                                <DropdownMenuItem>جزییات سفارش</DropdownMenuItem>
+                                <DropdownMenuItem>جزییات مشتری</DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
                     </TableCell>
@@ -56,8 +56,8 @@ const OrderTable = () => {
                                 </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end">
-                                <DropdownMenuItem>View order</DropdownMenuItem>
-                                <DropdownMenuItem>Customer details</DropdownMenuItem>
+                                <DropdownMenuItem>جزییات سفارش</DropdownMenuItem>
+                                <DropdownMenuItem>جزییات مشتری</DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
                     </TableCell>
@@ -78,8 +78,8 @@ const OrderTable = () => {
                                 </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end">
-                                <DropdownMenuItem>View order</DropdownMenuItem>
-                                <DropdownMenuItem>Customer details</DropdownMenuItem>
+                                <DropdownMenuItem>جزییات سفارش</DropdownMenuItem>
+                                <DropdownMenuItem>جزییات مشتری</DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
                     </TableCell>
@@ -100,8 +100,8 @@ const OrderTable = () => {
                                 </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end">
-                                <DropdownMenuItem>View order</DropdownMenuItem>
-                                <DropdownMenuItem>Customer details</DropdownMenuItem>
+                                <DropdownMenuItem>جزییات سفارش</DropdownMenuItem>
+                                <DropdownMenuItem>جزییات مشتری</DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
                     </TableCell>
@@ -122,8 +122,8 @@ const OrderTable = () => {
                                 </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end">
-                                <DropdownMenuItem>View order</DropdownMenuItem>
-                                <DropdownMenuItem>Customer details</DropdownMenuItem>
+                                <DropdownMenuItem>جزییات سفارش</DropdownMenuItem>
+                                <DropdownMenuItem>جزییات مشتری</DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
                     </TableCell>
@@ -144,8 +144,8 @@ const OrderTable = () => {
                                 </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end">
-                                <DropdownMenuItem>View order</DropdownMenuItem>
-                                <DropdownMenuItem>Customer details</DropdownMenuItem>
+                                <DropdownMenuItem>جزییات سفارش</DropdownMenuItem>
+                                <DropdownMenuItem>جزییات مشتری</DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
                     </TableCell>
@@ -166,8 +166,8 @@ const OrderTable = () => {
                                 </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end">
-                                <DropdownMenuItem>View order</DropdownMenuItem>
-                                <DropdownMenuItem>Customer details</DropdownMenuItem>
+                                <DropdownMenuItem>جزییات سفارش</DropdownMenuItem>
+                                <DropdownMenuItem>جزییات مشتری</DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
                     </TableCell>
@@ -188,8 +188,8 @@ const OrderTable = () => {
                                 </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end">
-                                <DropdownMenuItem>View order</DropdownMenuItem>
-                                <DropdownMenuItem>Customer details</DropdownMenuItem>
+                                <DropdownMenuItem>جزییات سفارش</DropdownMenuItem>
+                                <DropdownMenuItem>جزییات مشتری</DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
                     </TableCell>

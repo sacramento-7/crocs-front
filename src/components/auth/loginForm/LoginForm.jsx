@@ -29,11 +29,12 @@ const LoginForm = () => {
     });
     const [errorMessage, setErrorMessage] = useState(null);
     //const [key, setKey] = useState(null);
-    const { setToken } = UseAuth();
+    const { setToken, setIsAdmin } = UseAuth();
 
     const router = useRouter();
 
     let key = '';
+    let isAdmin = false;
 
     const submitHandler = async (data) => {
         try {
@@ -49,13 +50,13 @@ const LoginForm = () => {
                 }
 
                 key = res.data.key;
+                isAdmin = res.data.isAdmin;
                 setToken(key);
-                //setKey(res.data.key);
-
+                setIsAdmin(isAdmin);
             });
 
             if (key !== undefined && key !== null && key !== '') {
-                Cookies.set('Token', key, { path: '/', secure: true, sameSite: 'strict', expires: 4 }); // Set cookie to expire in 4 days
+                Cookies.set('Token', key, { secure: true, sameSite: 'None', expires: 4 }); // Set cookie to expire in 4 days
                 router.push('/');
                 toast.success("با موفقیت وارد شدید!", {
                     position: "bottom-right",
@@ -66,13 +67,12 @@ const LoginForm = () => {
                     draggable: true,
                     progress: undefined,
                 });
-
-                //revalidatePath('/');
             }
+
+            Cookies.set('IsAdmin', isAdmin, { secure: true, sameSite: 'None', expires: 4 });
 
         } catch (error) {
             setErrorMessage('مشکلی پیش آمده است!');
-            //console.log('Error in login form: ', error);
         }
     }
 
@@ -166,4 +166,7 @@ const LoginForm = () => {
     )
 }
 
-export default LoginForm
+export default LoginForm;
+
+
+//Cookies.set('Token', key, { path: '/', secure: true, sameSite: 'strict', expires: 4 });

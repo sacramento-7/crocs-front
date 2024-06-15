@@ -7,19 +7,22 @@ const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
     const [token, setToken] = useState(null);
-    //const [user, setUser] = useState();
-    //const [userToken, setUserToken] = useState();
+    const [isAdmin, setIsAdmin] = useState(false);
 
     useEffect(() => {
         const storedUserToken = Cookies.get('Token');
+        const isAdminUser = Cookies.get('IsAdmin');
         if (storedUserToken) {
             setToken(storedUserToken);
+        }
+        if(isAdminUser){
+            setIsAdmin(isAdminUser);
         }
     }, []);
 
 
     return (
-        <AuthContext.Provider value={{ token, setToken }}>
+        <AuthContext.Provider value={{ token, setToken, isAdmin, setIsAdmin }}>
             {children}
         </AuthContext.Provider>
     );

@@ -12,7 +12,7 @@ const HeaderAdmin = () => {
                 <span className="sr-only">Home</span>
             </Link>
             <div className="flex-1">
-                <h1 className="font-semibold text-lg">Recent Orders</h1>
+                <h1 className="font-semibold text-lg">پنل داشبورد</h1>
             </div>
             <div className="flex flex-1 items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
                 <form className="ml-auto flex-1 sm:flex-initial">
@@ -20,7 +20,7 @@ const HeaderAdmin = () => {
                         <FaSearch className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-500 dark:text-gray-400" />
                         <Input
                             className="pl-8 sm:w-[300px] md:w-[200px] lg:w-[300px] bg-white"
-                            placeholder="Search orders..."
+                            placeholder="جستجو ..."
                             type="search"
                         />
                     </div>
@@ -44,12 +44,12 @@ const HeaderAdmin = () => {
                         </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
-                        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                        <DropdownMenuLabel>پروفایل من</DropdownMenuLabel>
                         <DropdownMenuSeparator />
-                        <DropdownMenuItem>Settings</DropdownMenuItem>
-                        <DropdownMenuItem>Support</DropdownMenuItem>
+                        <DropdownMenuItem>تنظیمات</DropdownMenuItem>
+                        <DropdownMenuItem>پشتیبانی</DropdownMenuItem>
                         <DropdownMenuSeparator />
-                        <DropdownMenuItem>Logout</DropdownMenuItem>
+                        <DropdownMenuItem>خروج</DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
             </div>

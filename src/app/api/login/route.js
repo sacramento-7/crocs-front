@@ -8,22 +8,22 @@ export const GET = async (request) => {
 
 export const POST = async (request) => {
   const body = await request.json();
-  console.log('body in rout js:', body);
   let key = '';
+  let isAdmin = false;
 
   try {
-    const response = await axios.post('http://188.213.197.242/dj-rest-auth/login/', body,
+    const response = await axios.post('http://188.213.197.242/accounts/login/', body,
       {
         headers: {
           'Content-Type': 'application/json'
         }
       }
     ).then((res) => {
-      console.log('res back in api: ', res.data.key);
       key = res.data.key;
+      isAdmin = res.data.is_admin;
     });
 
-    return NextResponse.json({status: 'ok', key: key});
+    return NextResponse.json({status: 'ok', key: key, isAdmin: isAdmin});
   } catch (error) {
     // Handle any errors that occur during the request
     console.error('Error connecting to Python API:', error);

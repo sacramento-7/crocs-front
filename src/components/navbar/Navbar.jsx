@@ -38,14 +38,16 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   //const [isLoggedIn, setIsLoggedIn] = useState(true);
   // const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
-  const { token, setToken } = UseAuth();
+  const { token, setToken, isAdmin, setIsAdmin } = UseAuth();
 
   const pathname = usePathname();
 
   const handleLogout = () => {
     // Clear token from cookie and state
     Cookies.remove('Token');
+    Cookies.remove('IsAdmin');
     setToken(null);
+    setIsAdmin(false);
   };
 
   return (
@@ -103,10 +105,10 @@ const Navbar = () => {
                 <NavigationMenu className='p-0'>
                   <NavigationMenuList>
                     <NavigationMenuItem>
-                      <NavigationMenuLink href='/products' className={`${navigationMenuTriggerStyle()} ${pathname === '/products' ? 'bg-black' : 'bg-transparent'}  text-white`}>
-                        <span href="/products" className=''>
+                      <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} ${pathname === '/products' ? 'bg-black' : 'bg-transparent'}  text-white`}>
+                        <Link href="/products" className=''>
                           فروشگاه
-                        </span>
+                        </Link>
                       </NavigationMenuLink>
                     </NavigationMenuItem>
                   </NavigationMenuList>
@@ -175,17 +177,19 @@ const Navbar = () => {
                   </NavigationMenuList>
                 </NavigationMenu>
 
-                <NavigationMenu className='p-0'>
-                  <NavigationMenuList>
-                    <NavigationMenuItem>
-                      <NavigationMenuLink href='/admin' className={`${navigationMenuTriggerStyle()} ${pathname.includes('/admin') ? 'bg-black' : 'bg-transparent'}  text-white`}>
-                        <span href="/admin" className=''>
-                          داشبورد
-                        </span>
-                      </NavigationMenuLink>
-                    </NavigationMenuItem>
-                  </NavigationMenuList>
-                </NavigationMenu>
+                {isAdmin && (
+                  <NavigationMenu className='p-0'>
+                    <NavigationMenuList>
+                      <NavigationMenuItem>
+                        <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} ${pathname.includes('/admin') ? 'bg-black' : 'bg-transparent'}  text-white`}>
+                          <Link href="/admin" className=''>
+                            داشبورد
+                          </Link>
+                        </NavigationMenuLink>
+                      </NavigationMenuItem>
+                    </NavigationMenuList>
+                  </NavigationMenu>
+                )}
 
               </div>
             </div>
